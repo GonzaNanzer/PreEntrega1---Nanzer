@@ -96,6 +96,7 @@ function calcularYmostrar(){
         let descuento;
         do{
             descuento = Number(prompt("Ingrese el porcentaje de descuento o presione cancelar para no descontar."));
+            if(descuento > 100){alert("El descuento no puede ser mayor a 100%");descuento=null;}
         }while(isNaN(descuento) || descuento < 0 || descuento === null);
 
         descuento = descuento / 100;
